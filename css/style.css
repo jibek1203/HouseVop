@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body{
+    color: white;
+    margin: 0;
+    background-color:#252b34;
+}
+
+.header{
+    background: url('..//images/Rectangle\ \(1\).png');
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.logo{
+    background: url('../images/first-screen__logo.png');
+    width: 135px;
+    height: 66px;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style-type: none;
+    font-family: 'Raleway', serif;
+}
+
+.navbar__item{
+    margin-right: 15px;
+}
+
+.header__welcome{
+    margin-top: 260px;
+}
+
+.header__welcome-title{
+    font-size: 48px;
+    text-align: center;
+    color: #D4C17F;
+    font-family: 'Playfair Display', serif;
+}
+.header__mouse{
+    background: url(../images/mouse.png);
+    width: 40px;
+    height: 40px;
+    margin: 150px auto;
+}
+
+.header__contacts{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Raleway', sans-serif;
+}
+
+.first-section{
+    margin-top: 120px;
+}
+
+.first-section__places{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.first-section__places__item{
+    text-align: center;
+    margin: 0 40px;
+}
+.second-section{
+    position: relative;
+    top: 45px;
+    left: 5px;
+}
+.img-absolute{
+    position: absolute;
+    top: -60px;
+    right: -100px;
+}
+
+.second-section h2{
+    color:#D4C17F;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+}
+
+.img-absolute-2{
+    position: absolute;
+    top: 45px;
+    left: 5px;
+}
+.second-section__gallery img{
+    max-width: 450px;
+}
+
+.second-section__gallery-1, .second-section__gallery-2{
+    display: flex;
+    justify-content: space-between;
+    margin: 25 px 0;
+}
+
+.gallery-1__item, .gallery-2__item{
+    position: relative;
+}
+
+.second-section span{
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* footer */
+
+
+.container_footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 550px;  
+}
+.footer {
+    background: center no-repeat url('../images/gallery-3.png');
+    max-width: 1907px;
+    height: 550px;
+}
+
+.footer_text {
+    font-family: 'Playfair Display', serif;
+    color: #D4C17F; 
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 180px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    
+}
+
+
+.footer_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_items-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    width: 530px;
+    height: 120px;
+    line-height: 24px;
+    padding-left: 10px;
+    
+}
+
+
+.footer_items-borders {
+    display: flex; 
+    justify-content: space-between;
+    width: 530px;
+    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    
+} 
+  
+.input {
+    width: 245px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    color: #BEBEBE;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.input::placeholder {
+    color: #BEBEBE;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+  
+.footer_item-3 {
+    text-align: center;
+    font-size: 13px;
+    width: 245px;
+    height: 50px;
+    margin-top: 40px;
+}
+  
+.nav__btn {
+    width: 249px;
+    height: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #D4C17F;
+    border: none;
+    margin-top: 30px;
+}
+
+.btn-f:hover {
+    background-color: rgb(151, 132, 63);
+    color: #ffffff;
+}
+
+
+/* Hamburger menu start */
+
+#menu__toggle{
+    opacity: 0;
+    
+}
+
+.menu__btn{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+.menu__btn > span::before{
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after{
+    content: '';
+    top: 8px;
+}
+
+#menu__toggle:checked ~ .menu__btn > span{
+    transform: rotate(45deg);
+    transition: all 0.4s ease 0s;
+}
+#menu__toggle:checked ~ .menu__btn > span::before{
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box{
+    visibility: visible;
+    right: 0;
+}
+
+
+
+/* Hamburger menu end  */
+
+
+@media all and (max-width: 768px){
+    .menu__btn{
+        visibility: visible;
+    }
+    .menu__box{
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100px;
+        width: 300px;
+        height: 100;
+        margin: 0;
+        padding: 80px 0;
+        text-align: center;
+        background-color: slategray;
+        z-index: 1;
+    }
+    .navbar__item{
+        display: block;
+        padding: 12px 24px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+    .navbar__item:hover{
+        background-color: snow;
+    }
+}
+
+/* Медиа запросы */
+
+@media (max-width: 1200px) {
+
+    .container {
+        align-items: center;
+        max-width: 1000px;
+        margin: 0px auto;
+        padding: 0px 15px;
+    }
+
+    .container_footer {
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 2px 15px;
+    }
+}
+
+@media (max-width: 375px){
+    .img-absolute{
+        left: 45px;
+    }
+    .header{
+        background: url(../images/Rectangle\ \(1\).png);
+        width: 100%;
+        height: auto;
+    }
+    
+    .container {
+        width: 100%;
+        height: 0 auto;
+        padding: none;
+
+    }
+
+    .first-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header__address{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .second-section{
+        display: flex;
+        flex-direction: column;
+        margin: 500px;
+    }
+
+    .header__welcome{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_items-text{
+          align-items: center;
+          margin-bottom: 2500px;
+          padding: 0;
+          font-size: 5px;
+
+    }
+}
